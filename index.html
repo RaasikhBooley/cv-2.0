@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Page Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" type="text/css" media="screen" href="css/main.css">
+    <!-- google fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300" rel="stylesheet">
+    <!-- link to jQuery  -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <!-- link to JS -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <!-- <button onclick="flip()">GET TO KNOW ME</button> -->
+    <div class="card">
+        <div class="card-flip">
+            <section class="front">
+                <div class="front-grid">
+                    <img class="logo" src="img/logo.png" alt="">
+
+                    <nav class="nav">
+                        <a href="#about" onclick="flip()"><button class="btn">About</button></a>
+                        <a href="#education" onclick="flip()"><button class="btn">Education</button></a>
+                        <a href="#skills" onclick="flip()"><button class="btn">Skills</button></a>
+                        <a href="#contact" onclick="flip()"><button class="btn">Contact</button></a>
+                    </nav>
+                </div>
+            </section>
+
+            <section class="back">
+                <div class="topper">
+                    <img class="arrow" src="img/arrow.png" alt="" onclick="flip()">
+                </div>
+
+                <div class="content">
+                    <div class="content-grid">
+                        <picture class="photo">
+                            <!-- <h3>photo</h3> -->
+                            <img class="img" src="img/me.JPG" alt="">
+                        </picture>
+
+                        <div class="title">
+                            <h1>Raasikh Booley</h1>
+                            <h4>Junior Web Developer</h4>
+                        </div>
+
+                        <article class="info">
+                            <h3 id="about">About</h3>
+                                <p>Raasikh Booley is a Web Developer, Animator and Game Develeper/Designer. After matriculating in 2014, he took a gap year in 2015, and the following year in 2016, he attended City Varsity "school of media and arts" where he recieved his diploma in Animation & Game Design.Now having finished a 6 month Coding Course at Life Choices, he sets his sights on tackling a career in the Gaming Industry, in hopes of making it big.</p>
+                
+                            <h3 id="education">Education</h3>
+                                <p>Darul Islam High School - Matric Certificate (2014)</p>
+                                <p>City Varsity - Animation Diploma (2017)</p>
+                                <p>Life Choices - Coding Certificate (2019)</p>
+                
+                            <h3 id="skills">Skills</h3>
+
+                                <ul>
+                                    <li>HTML</li>
+                                    <li>CSS</li>
+                                    <li>SASS</li>
+                                    <li>JavaScript</li>
+                                </ul>
+                            <br>
+                                
+                            <h3 id="contact">Contact</h3>
+                                <p>Cell - 0725194919</p>
+                                
+                                <p>Email - raasikh.booley@gamil.com</p>
+                                    
+                                <p>Location - South Africa, Cape Town, Athlone</p>
+                        </article>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+</body>
+</html>
+
+<!-- JS button on click flip -->
+<!-- https://jsfiddle.net/james2doyle/qsQun/ -->

@@ -1,0 +1,183 @@
+body {
+  background: linear-gradient( rgb(0, 0, 0), rgb(50, 50, 50));
+  font-family: 'Open Sans Condensed', sans-serif;
+}
+
+.card {
+  width: 50em;
+  height: 25em;
+  perspective: 62.5em;
+  margin: 0 auto;
+  padding-top: 8.95%;
+  padding-bottom: 8.95%
+}
+
+.card-flip {
+  width: 100%;
+  height: 100%;
+  /* text-align: center; */
+  transition: transform 1s;
+  transform-style: preserve-3d;
+  border: solid 0.0625em black;
+}
+
+.card-flip.flipped {
+  transform: rotateY(180deg);
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+  box-shadow: 0 1.25em 1.25em rgba(50,50,50,.2);
+}
+
+/* front of the card */
+.front {
+  background: linear-gradient( rgb(255, 0, 0), rgb(127, 0, 0));
+}
+
+.logo {
+  width: 9.375em;
+  height: 9.375em;
+  margin: 0 auto;
+}
+
+.btn {
+  /* display: list-item; */
+  width: 6.25em;
+  height: 2.625em;
+  /* margin: 0 auto;    */
+}
+
+a {
+  text-decoration: none;
+}
+
+.nav {
+  display: inline-block;
+}
+
+/* back of the card */
+.back {
+  background-color: white;
+  transform: rotateY(180deg);
+}
+
+.topper {
+  /* background-color: blue; */
+  background: linear-gradient( rgb(255, 0, 0), rgb(127, 0, 0));
+  /* background-color: rgb(155, 155, 255); */
+  width: 100%;
+  height: 10%;
+  border-bottom: solid 0.0625em black;
+}
+
+.arrow {
+  width: 15px;
+  height: 40px;
+  padding: 0em 0.2em;
+}
+
+.content {
+  background-color:#eff9f0;
+  width: 100%;
+  height: 90%;
+  border-bottom: solid 1px black;
+  
+}
+
+.front-grid {
+  display: grid;
+  height: 60vh;
+  grid-gap: 0.6em 0.6em;
+  padding: 0.5em;
+  grid-template-columns: repeat(3 , 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  grid-template-areas: 
+        ". . ."    
+        "logo nav nav"
+        ". . ." 
+}
+
+.logo {
+  grid-area: logo;
+}
+
+.nav {
+  grid-area: nav;
+  padding: 3.3em 0em;
+}
+
+/* grid for back of card */
+.content-grid {
+  display: grid;
+  grid-gap: 0.6em 0.6em;
+  padding: 0.5em;
+  grid-template-columns: repeat(5 , 1fr);
+  grid-template-rows: 12vh 12vh 12vh 12vh;
+  grid-template-areas: 
+      "photo title title title title"
+      "photo title title title title"
+      "info info info info info"
+      "info info info info info"
+}
+
+.photo {
+  grid-area: photo;
+  background-color: rgb(255, 220, 155);
+}
+
+.img {
+  width: 10.4375em;
+  height: 10.4375em;
+  border: solid 0.0625em black;
+}
+
+.title {
+  grid-area: title;
+  /* background-color: rgb(255, 220, 155); */
+  padding: 1.5em 0.5em;
+}
+
+.info {
+  grid-area: info;
+  background-color: rgb(255, 220, 155);
+  overflow-y: scroll;
+  scroll-behavior: smooth;
+  border: solid 0.0625em black;
+  padding: 0em 0.5em;
+  font-size: 18px;
+}
+
+h3 {
+  margin-top: 0.5em;
+}
+
+/* Responsive for Smart phone */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 320px) 
+  and (max-device-width: 480px)
+  and (-webkit-min-device-pixel-ratio: 2) {
+
+}
+
+/* Responsive for Tablet */
+/* Portrait and Landscape */
+@media only screen 
+  and (min-device-width: 768px) 
+  and (max-device-width: 1024px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+
+}
+
+/* Responsive for Desktop */
+/* ----------- Non-Retina Screens ----------- */
+@media screen 
+  and (min-device-width: 1200px) 
+  and (max-device-width: 1600px) 
+  and (-webkit-min-device-pixel-ratio: 1) {
+  
+} 
